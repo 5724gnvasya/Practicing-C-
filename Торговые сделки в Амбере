@@ -1,0 +1,32 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int n1,n2,p1,p2, k1=0,k2=0;
+    cin>>n1>>p1;
+    cin>>n2>>p2;
+    while (n1 >=p1)
+    {
+        k1+=n1%p1;
+        n1=n1/p1;
+    }
+    k1+=n1;
+
+    while (n2>=p2)
+    {
+        k2+=n2%p2;
+        n2=n2/p2;
+    }
+    k2+=n2;
+    if (k2==k1)
+    {
+        cout<<k2;
+    }
+    else
+    {
+        cout<<0;
+    }
+    return 0;
+}
