@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+ 
+ 
+bool happy(int s)
+{
+     return ((s/100000)+(s/10000%10)+(s/1000%10)==(s/100%10)+(s/10%10)+(s%10));
+}
+int main()
+{
+    int i,k;
+    
+    cin>>k;
+    for (i=0;i<k;i++) 
+    {
+       int n;
+       cin>>n;
+       
+       
+    if (happy(n-1) || happy (n+1))
+    {
+         cout<<"Yes"<<endl;
+    }
+    else cout<<"No"<<endl;
+  
+    }
+     
+    return 0;
+}
